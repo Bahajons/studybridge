@@ -11,7 +11,7 @@ import "../style/contact_form.css";
 import { Box } from "@mui/material";
 
 export default function ContactForm() {
-  const [sent, setSent] = useState(true);
+  const [sent, setSent] = useState(false);
   const [error, setError] = useState();
   const [user, setUser] = useState({
     full_name: "",
@@ -220,7 +220,7 @@ export default function ContactForm() {
               </Box>
             </div>
           ) : (
-            <div className="w-75 mx-auto">
+            <div className="w-75 mx-auto text-center">
               <h3 className="text-center">Thank you for registration! </h3>
               <p>
                 Europe is waiting for you. <br />
