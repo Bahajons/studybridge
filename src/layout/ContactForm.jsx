@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
@@ -57,25 +56,44 @@ export default function ContactForm() {
 
   async function send_email() {
     console.log("axios");
-    const url =
-      "https://sheets.googleapis.com/v4/spreadsheets/1bbRMZ1HceRAbXxml0Lb15vHeozO97gZMSNx-4sfBVLA/values/append";
+
     const data = {
-      ...user,
+      Full_name: user.full_name,
+      Age: user.age,
+      Email: user.email,
+      Type: user.type,
+      Telegram: user.telegram_number,
     };
 
-    await axios
-      .post(url, data, {
+    // Add one line to the sheet
+    fetch(
+      "https://sheet.best/api/sheets/025beed8-5ecb-4c80-ad99-eeefe7ffa384",
+      {
+        method: "POST",
+        mode: "cors",
         headers: {
-          Authorization: "Bearer AIzaSyDx-Yt1yNodqU9kjhhrG-Q7flAO5fUrsQc",
-          "Content-Type":'text/plain'
+          "Content-Type": "application/json",
         },
+        body: JSON.stringify(data),
+      }
+    )
+      .then((r) => r.json())
+      .then((data) => {
+        // The response comes here
+        console.log(data);
+        setSent(false)
+        setUser({
+          ...user,
+          full_name: "",
+          age: "",
+          email: "",
+          telegram_number: "",
+          type: "",
+        });
       })
-      .then((res) => {
-        console.log(res);
-        setSent(false);
-      })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        // Errors are reported there
+        console.log(error);
       });
   }
 
