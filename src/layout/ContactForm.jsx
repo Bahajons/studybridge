@@ -11,7 +11,7 @@ import "../style/contact_form.css";
 import { Box } from "@mui/material";
 
 export default function ContactForm() {
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(true);
   const [error, setError] = useState();
   const [user, setUser] = useState({
     full_name: "",
