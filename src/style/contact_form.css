@@ -1,0 +1,48 @@
+body {
+  position: relative;
+}
+.contact {
+  background-image: url("../../public//image/bg_img.jpg");
+  /* background-image: url(); */
+  /* background-color: red; */
+  height: 100vh;
+  background-size: cover;
+  background-position: left center;
+}
+
+.line {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.footer-line {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 8px 0;
+}
+.footer-line a {    
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+}
+.footer-line img {
+  width: 25px;
+  margin-left: 8px;
+}
+.smile{
+    font-size: 35px;
+}
+@media screen and (min-width: 650px) {
+  .contact {
+    background-image: url("../../public//image/bg_desktop.webp");
+    /* background-color: red; */
+    height: "100vh";
+    background-size: "cover";
+    background-position: "left top";
+  }
+}
