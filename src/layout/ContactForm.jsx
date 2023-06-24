@@ -207,7 +207,7 @@ export default function ContactForm() {
                     required
                   />
                 </div>
-                <div className="mt-3">
+                <div className="mt-3 text-center">
                   <Button
                     variant="contained"
                     onClick={() => validate()}

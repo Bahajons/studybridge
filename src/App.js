@@ -1,4 +1,3 @@
-import "./App.css";
 import ContactForm from "./layout/ContactForm";
 
 function App() {

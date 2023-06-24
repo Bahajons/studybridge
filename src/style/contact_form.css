@@ -1,5 +1,6 @@
 body {
   position: relative;
+  text-align: center;
 }
 .contact {
   background-image: url("../../public//image/bg_img.jpg");
@@ -24,11 +25,13 @@ body {
   position: absolute;
   bottom: 0;
   padding: 8px 0;
+  text-align: center;
 }
 .footer-line a {    
     text-decoration: none;
     color: #000;
     font-style: italic;
+    display: inline;
 }
 .footer-line img {
   width: 25px;
