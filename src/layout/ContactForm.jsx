@@ -81,7 +81,7 @@ export default function ContactForm() {
       .then((data) => {
         // The response comes here
         console.log(data);
-        setSent(false)
+        setSent(false);
         setUser({
           ...user,
           full_name: "",
