@@ -9,6 +9,7 @@ import { BsTelegram } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import "../style/contact_form.css";
 import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(true);
@@ -98,18 +99,20 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="contact">
+    <div className="contact-register">
       <div className="line">
-        <img
-          src="./image/logo.png"
-          className="py-1"
-          style={{ width: "200px" }}
-          alt=""
-        />
+        <Link to={'/'}>
+          <img
+            src="./image/logo.png"
+            className="py-1"
+            style={{ width: "200px" }}
+            alt=""
+          />
+        </Link>
         <div className="">
           <div className="d-flex mx-2">
             <a
-              href="https://t.me/AbbosGaybullayev"
+              href="https://t.me/StudyBridge_agency"
               style={{ fontSize: "25px", padding: "0 8px" }}
             >
               <BsTelegram />

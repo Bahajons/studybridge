@@ -2,8 +2,8 @@ body {
   position: relative;
   text-align: center;
 }
-.contact {
-  background-image: url("../../public//image/bg_img.jpg");
+.contact-register {
+  background-image: url("../../public/image/bg_img.jpg");
   /* background-image: url(); */
   /* background-color: red; */
   height: 100vh;
@@ -41,7 +41,7 @@ body {
     font-size: 35px;
 }
 @media screen and (min-width: 650px) {
-  .contact {
+  .contact-register {
     background-image: url("../../public//image/bg_desktop.webp");
     /* background-color: red; */
     height: "100vh";
