@@ -19,8 +19,13 @@ export default function ContactForm() {
     age: "",
     email: "",
     type: "",
+    ielts: "",
+    ielts_score: "",
+    english_level: "",
     telegram_number: "",
   });
+  const [english_level, setEnglish_level] = useState();
+
   function validate() {
     console.log("dsds");
     let err = {},
@@ -45,6 +50,18 @@ export default function ContactForm() {
       t = false;
       err = { ...err, telegram_number: true };
     }
+    if (!user.ielts) {
+      t = false;
+      err = { ...err, ielts: true };
+    }
+    if (user.ielts == "have" && !user.ielts_score) {
+      t = false;
+      err = { ...err, ielts_score: true };
+    }
+    if (user.ielts == "have_not" && !user.english_level) {
+      t = false;
+      err = { ...err, english_level: true };
+    }
     if (t) {
       send_email();
     }
@@ -52,7 +69,7 @@ export default function ContactForm() {
   }
 
   const handleChange = (event) => {
-    setUser({ ...user, type: event.target.value });
+    setUser({ ...user, [event.target.name]: event.target.value });
   };
 
   async function send_email() {
@@ -63,6 +80,9 @@ export default function ContactForm() {
       Age: user.age,
       Email: user.email,
       Type: user.type,
+      IELTS: user.ielts,
+      IELTS_score: user.ielts_score,
+      English_level: user.english_level,
       Telegram: user.telegram_number,
     };
 
@@ -88,8 +108,11 @@ export default function ContactForm() {
           full_name: "",
           age: "",
           email: "",
-          telegram_number: "",
           type: "",
+          ielts: "",
+          ielts_score: "",
+          english_level: "",
+          telegram_number: "",
         });
       })
       .catch((error) => {
@@ -101,7 +124,7 @@ export default function ContactForm() {
   return (
     <div className="contact-register">
       <div className="line">
-        <Link to={'/'}>
+        <Link to={"/"}>
           <img
             src="./image/logo.png"
             className="py-1"
@@ -185,10 +208,12 @@ export default function ContactForm() {
                     </InputLabel>
                     <Select
                       labelId="demo-simple-select-label"
-                      id="demo-simple-select"
+                      id="id"
                       value={user.type}
                       error={error?.type}
+                      className="ielts"
                       label="Choose"
+                      name="type"
                       onChange={handleChange}
                     >
                       <MenuItem value={"bacherlor"}>Bachelor</MenuItem>
@@ -196,6 +221,82 @@ export default function ContactForm() {
                     </Select>
                   </FormControl>
                 </div>
+                {/* English choose */}
+                <div className="mt-3">
+                  <FormControl fullWidth className="w-100">
+                    <InputLabel id="demo-simple-select-label">
+                      Your English
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={user.ielts}
+                      error={error?.ielts}
+                      label="English level"
+                      name="ielts"
+                      onChange={handleChange}
+                    >
+                      <MenuItem value={"have"}>I have IELTS</MenuItem>
+                      <MenuItem value={"have_not"}>I have not IELTS</MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
+
+                {/* IELTS Score */}
+                {user?.ielts == "have" ? (
+                  <div className="mt-3">
+                    <FormControl fullWidth className="w-100">
+                      <InputLabel id="demo-simple-select-label">
+                        IELTS Score
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={user.ielts_score}
+                        error={error?.ielts_score}
+                        name="ielts_score"
+                        label="English level"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={"9"}>9</MenuItem>
+                        <MenuItem value={"8.5"}>8.5</MenuItem>
+                        <MenuItem value={"8"}>8</MenuItem>
+                        <MenuItem value={"7.5"}>7.5</MenuItem>
+                        <MenuItem value={"7"}>7</MenuItem>
+                        <MenuItem value={"6.6"}>6.6</MenuItem>
+                        <MenuItem value={"6"}>6</MenuItem>
+                        <MenuItem value={"5.5"}>5.5</MenuItem>
+                        <MenuItem value={"5"}>5</MenuItem>
+                        <MenuItem value={"4<"}>{`<5`}</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </div>
+                ) : user.ielts == "have_not" ? (
+                  <div className="mt-3">
+                    <FormControl fullWidth className="w-100">
+                      <InputLabel id="demo-simple-select-label">
+                        English Level
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={user.english_level}
+                        error={error?.english_level}
+                        label="English level"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={"A1"}>A1-Beginner</MenuItem>
+                        <MenuItem value={"A2"}>A2-Pre-Intermediate</MenuItem>
+                        <MenuItem value={"B1"}>B1-Intermediate</MenuItem>
+                        <MenuItem value={"B2"}>B2-Upper-Intermediate</MenuItem>
+                        <MenuItem value={"C1"}>C1-Advanced</MenuItem>
+                        <MenuItem value={"C2"}>C2-Proficiency</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </div>
+                ) : (
+                  ""
+                )}
 
                 <div className="mt-3">
                   <TextField
