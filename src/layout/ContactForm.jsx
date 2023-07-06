@@ -237,7 +237,7 @@ export default function ContactForm() {
                       onChange={handleChange}
                     >
                       <MenuItem value={"have"}>I have IELTS</MenuItem>
-                      <MenuItem value={"have_not"}>I have not IELTS</MenuItem>
+                      <MenuItem value={"have_not"}>I don't have IELTS</MenuItem>
                     </Select>
                   </FormControl>
                 </div>
