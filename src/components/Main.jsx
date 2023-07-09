@@ -91,7 +91,7 @@ export default function Main() {
 
               <div className="feat-item mb-md50 col-lg-4">
                 <div className="text-center">
-                  <span className="icon icon-basic-anchor"></span>
+                  <span className="icon icon-basic-book-pen"></span>
                   <h5>Academic Program Evaluation</h5>
                   {/* <h6>Modern & Clean Design</h6> */}
                   <p>
@@ -456,9 +456,9 @@ export default function Main() {
                 <span data-filter="*" className="active">
                   All
                 </span>
-                <span data-filter=".brand">Brand</span>
+                {/* <span data-filter=".brand">Brand</span>
                 <span data-filter=".web">Design</span>
-                <span data-filter=".graphic">Graphic</span>
+                <span data-filter=".graphic">Graphic</span> */}
               </div>
             </div>
 
@@ -486,131 +486,6 @@ export default function Main() {
                 </div>
               ))}
 
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items web">
-                <div className="item-img">
-                  <img src="img/portfolio/2.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/2.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items brand">
-                <div className="item-img">
-                  <img src="img/portfolio/3.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/3.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items graphic">
-                <div className="item-img">
-                  <img src="img/portfolio/4.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/4.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items web">
-                <div className="item-img">
-                  <img src="img/portfolio/5.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/5.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items brand">
-                <div className="item-img">
-                  <img src="img/portfolio/6.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/6.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items brand">
-                <div className="item-img">
-                  <img src="img/portfolio/7.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/7.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- gallery item --> */}
-              <div className="col-lg-3 col-md-6 items graphic">
-                <div className="item-img">
-                  <img src="img/portfolio/8.jpg" alt="image" />
-                  <div className="item-img-overlay">
-                    <div className="overlay-info full-width">
-                      <p>Logo | Branding</p>
-                      <h6>Creative Web Design</h6>
-                      <a href="img/portfolio/8.jpg" className="popimg">
-                        <span className="icon">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -981,8 +856,8 @@ export default function Main() {
             </div>
 
             <div className="pricing-tables text-center full-width">
-              <div className="row">
-                <div className="col-lg-3 ">
+              <div className="row justify-content-center">
+                <div className="col-lg-3 d-none">
                   <div className="item mb-md50">
                     <div className="type">
                       <h4>Free</h4>
@@ -1013,7 +888,7 @@ export default function Main() {
                   </div>
                 </div>
 
-                <div className="col-lg-3">
+                <div className="col-lg-3 d-none">
                   <div className="item mb-md50">
                     <div className="type">
                       <h4>Basic</h4>
@@ -1045,30 +920,45 @@ export default function Main() {
                 </div>
 
                 <div className="col-lg-3">
-                  <div className="item active mb-md50">
+                  <div className="item mb-md50">
                     <div className="type">
                       <h4>Standard</h4>
                     </div>
 
                     <div className="value">
                       <h3>
-                        <span>$</span>30
+                        <span>€</span>300
                       </h3>
-                      <span className="per">/ Month</span>
+                      {/* <span className="per">/ Month</span> */}
                     </div>
 
                     <div className="features">
-                      <ul>
-                        <li>100 GB Disk Space</li>
-                        <li>30 Domain Names</li>
-                        <li>5 Email Address</li>
-                        <li>Enhanced Security</li>
-                        <li>Unlimited Support</li>
+                      <ul className="text-left">
+                        <li>
+                          ✓ Consultation with the admissions manager and other
+                          professionals who will help you before you sign the
+                          education contract.
+                        </li>
+                        <li>
+                          ✓ Personal support for the admission process Access to
+                          information material on university admission and
+                          registration of migration documents.
+                        </li>
+                        <li>✓ Preparation for the entrance examinations.</li>
+                        <li>
+                          ✓ Registration at the university, support in passing
+                          interviews and examinations.
+                        </li>
+                        <li>
+                          ✓ Enrolment at a university and receiving an
+                          invitation to apply for a visa, a residence permit in
+                          Europe.
+                        </li>
                       </ul>
                     </div>
 
                     <div className="order">
-                      <a href="#0" className="butn butn-light">
+                      <a href="#0" className="butn butn-bg">
                         <span>Purchase Now</span>
                       </a>
                     </div>
@@ -1076,30 +966,51 @@ export default function Main() {
                 </div>
 
                 <div className="col-lg-3">
-                  <div className="item">
+                  <div className="item active">
                     <div className="type">
-                      <h4>Premium</h4>
+                      <h4>Vip </h4>
                     </div>
 
                     <div className="value">
                       <h3>
-                        <span>$</span>80
+                        <span>€</span>500
                       </h3>
-                      <span className="per">/ Month</span>
+                      {/* <span className="per">/ Month</span> */}
                     </div>
 
                     <div className="features">
                       <ul>
-                        <li>500 GB Disk Space</li>
-                        <li>100 Domain Names</li>
-                        <li>10 Email Address</li>
-                        <li>Enhanced Security</li>
-                        <li>Unlimited Support</li>
+                        <li>
+                          ✓ Personal support of the admission process (personal
+                          manager, unlimited consultation hours).
+                        </li>
+                        <li>
+                          ✓ Access to information material on university
+                          admission and registration of migration documents.
+                        </li>
+                        <li>
+                          ✓ Enrolment at the university, support in passing
+                          interviews and exams
+                        </li>
+                        <li>
+                          ✓ Enrolment at a university and receiving an
+                          invitation to apply for a visa, a residence permit in
+                          Europe
+                        </li>
+                        <li>
+                          ✓ Assistance with processing migration documents,
+                          pick-up from the airport, help with finding a flat or
+                          accommodation in a hall of residence
+                        </li>
+                        <li>
+                          ✓ Personal support at the migration office and in
+                          obtaining a residence permit in Europe
+                        </li>
                       </ul>
                     </div>
 
                     <div className="order">
-                      <a href="#0" className="butn butn-bg">
+                      <a href="#0" className="butn butn-light">
                         <span>Purchase Now</span>
                       </a>
                     </div>
